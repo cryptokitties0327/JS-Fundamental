@@ -100,13 +100,46 @@ pushObject(newArr, pig)
 // 14. Make sure that the array contains four hashes (maybe log to the screen).
 console.log(newArr)
 // 15. Access two elements of the array that you have created (via an index)
+console.log(newArr[0])
+console.log(newArr[1])
 // 16. For one of these, now access one of the values of the object at that is located at that index.
+console.log(newArr[0].name)
 // ---------------
-// 17. Write a function that takes two arguments - one an object, and the other an array. Inside the function log out a value from the object, and an element from the array.
+// 17. Write a function that takes two arguments - one an object, and the other an array. Inside the function 
+//log out a value from the object, and an element from the array.
+function inspect(object, array){
+  console.log(Object.keys(object)[0])
+  console.log(array[1])
+}
+
 // 18. Define four objects, one with one key, one with two keys, one with three keys, and one with four.
+const car = {brand: "Toyota"}
+const phone = {brand: "Samsung", price: 50}
+const animal = {type: "Bear", age: 30}
+const  activity = {type: "coding", time: "3 years", frontend: "html, react", backend: "express"}
 // 19. Define two different arrays, with two different datatypes.
+const food = ["orange", {price: 5}]
+const sports = ["tennis", 200]
 // 20. Call the function four times, once with each object, and use the arrays you made.
+inspect(car, food)
+inspect(animal, sports)
+inspect(phone, sports)
+inspect(phone, food)
 // ---------------
 // 21. Write a function that takes five arguments: three strings, and two numbers.
+function newFunction(str1, str2, str3, num1, num2){
+  console.log(str1, str2, str3, num1, num2)
+}
 // 22. Call that function twice.
-// 23. Write a function that takes two arguments - one an object, and the other an array. Inside the function log out a value from the object, and an element from the array.
+newFunction("animal", "car", "orange", 20, 50)
+newFunction("game", "tea", "orange", 100, 22)
+
+// 23. Write a function that takes two arguments - one an object, and the other an array. 
+// Inside the function log out a value from the object, and an element from the array.
+
+function objectArray2(object, array){
+  console.log(Object.values(object)[0])
+  console.log(array[0])
+}
+
+objectArray2({brand: "Samsung", price: 50}, ["orange", {price: 5}])
